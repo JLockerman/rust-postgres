@@ -193,6 +193,11 @@ impl SimpleQueryRow {
         })
     }
 
+    /// Returns the columns names for the row
+    pub fn columns(&self) -> &[String] {
+        &*self.columns
+    }
+
     /// Determines if the row contains no values.
     pub fn is_empty(&self) -> bool {
         self.len() == 0
